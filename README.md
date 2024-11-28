@@ -32,7 +32,8 @@ This is a web application that allows users to browse, purchase, and manage snea
 - **Database**: SQL Server
 
 
-# Screenshots of the system
+## GUI
+
 ![Screenshot (75)](https://github.com/user-attachments/assets/22c7e4bb-d3f1-4509-9a07-77b33552d231)
 ![Screenshot (76)](https://github.com/user-attachments/assets/e3b8eee2-62ce-4b2c-8f82-07e3ad454e75)
 ![Screenshot (77)](https://github.com/user-attachments/assets/ad596c4f-30aa-415f-87fb-f32a532f0df7)
@@ -49,20 +50,26 @@ This is a web application that allows users to browse, purchase, and manage snea
 ![image](https://github.com/user-attachments/assets/d673091c-6341-4d8d-83c1-775c4edf1977)
 ![image](https://github.com/user-attachments/assets/748948e9-0f3a-4821-b683-1913fc5d9ecb)
 
+## Database Design
 
-
-
-
-# 3. Database design
 ![database](https://github.com/user-attachments/assets/1244673d-c555-47e9-812e-0a815073aecb)
 
+## System Design
 
+
+
+## Conclusion
+
+The pros and cons of your application.
+ What you've learned during developing of your application.
+ What would you improve your application in the future ?
+ 
 ## Contributors
-
-### Team Members
-
-- **Nguyễn Ngọc Minh** - SE182009
-  - GitHub: [https://github.com/NguyenNgocMinh-SE182009]
 
 - **Mạc Viết Thông** - SE181966
   - GitHub: [https://github.com/vitoo16]
+    
+- **Nguyễn Ngọc Minh** - SE182009
+  - GitHub: [https://github.com/NguyenNgocMinh-SE182009]
+
+
