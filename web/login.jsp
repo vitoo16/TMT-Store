@@ -54,29 +54,32 @@
                         <div class="account_form">
                             <h2>Đăng nhập</h2>
                             <c:set var="cookie" value="${pageContext.request.cookies}"/>
-                                <form action="user?action=checkLogin" method="POST">
-                                    <p style="color: red; align-content: center;">
-                                        ${requestScope.error}
-                                    </p>
-                                    <p>   
-                                        <label>Email <span>*</span></label>
-                                        <input name="user_email" type="text" value="${cookie.email.value}">
-                                    </p>
-                                    <p>   
-                                        <label>Mật khẩu <span>*</span></label>
-                                        <input name="user_pass" type="password" value="${cookie.pass.value}">
-                                    </p>   
-                                    <div class="login_submit">
-                                        <a href="#">Quên mật khẩu</a>
-                                        <label for="remember">
-                                            <input ${(cookie.rem.value eq 'ON')?"checked":""} id="remember" name="remember" value="ON" type="checkbox">
-                                            Remember me
-                                        </label>
-                                        <button type="submit">Đăng nhập</button>
+                            <form action="user?action=checkLogin" method="POST">
+                                <p style="color: red; align-content: center;">
+                                    ${requestScope.error}
+                                </p>
+                                <p style="color: red; align-content: center;">
+                                    ${requestScope.null_error_login}
+                                </p>
+                                <p>   
+                                    <label>Email <span>*</span></label>
+                                    <input name="user_email" type="text" value="${cookie.email.value}">
+                                </p>
+                                <p>   
+                                    <label>Mật khẩu <span>*</span></label>
+                                    <input name="user_pass" type="password" value="${cookie.pass.value}">
+                                </p>   
+                                <div class="login_submit">
+                                    <a href="#">Quên mật khẩu</a>
+                                    <label for="remember">
+                                        <input ${(cookie.rem.value eq 'ON')?"checked":""} id="remember" name="remember" value="ON" type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <button type="submit">Đăng nhập</button>
 
-                                    </div>
+                                </div>
 
-                                </form>
+                            </form>
                         </div>    
                     </div>
                     <!--login area start-->
@@ -87,13 +90,16 @@
                             <h2>Đăng ký</h2>
                             <form action="user?action=signup" method="POST">
                                 <p style="color: red; align-content: center;">
-                                        ${requestScope.error_pass}
-                                </p>
-                                <p style="color: blue; align-content: center;">
-                                        ${requestScope.done}
+                                    ${requestScope.null_error}
                                 </p>
                                 <p style="color: red; align-content: center;">
-                                        ${requestScope.emailavailable}
+                                    ${requestScope.error_pass}
+                                </p>
+                                <p style="color: blue; align-content: center;">
+                                    ${requestScope.done}
+                                </p>
+                                <p style="color: red; align-content: center;">
+                                    ${requestScope.emailavailable}
                                 </p>
                                 <p>   
                                     <label>Email <span>*</span></label>
