@@ -48,8 +48,12 @@ public class UserController extends HttpServlet {
             String remember = request.getParameter("remember");
             userDAO dao = new userDAO();
             Entity.User user = dao.checkUser(user_email, user_pass);
+            if (user_email == null || user_email.trim().isEmpty() || user_pass == null || user_pass.trim().isEmpty()) {
+                request.setAttribute("null_error_login", "Không được bỏ trống!");
+                request.getRequestDispatcher("user?action=login").forward(request, response);
+            }
             if (user == null) {
-                request.setAttribute("error", "Tài khoản không tồn tại !");
+                request.setAttribute("error", "Tài khoản hoặc mật khẩu không đúng");
                 request.getRequestDispatcher("user?action=login").forward(request, response);
             } else {
                 HttpSession session = request.getSession();
@@ -150,6 +154,11 @@ public class UserController extends HttpServlet {
             String user_email = request.getParameter("user_email");
             String user_pass = request.getParameter("user_pass");
             String re_pass = request.getParameter("re_pass");
+
+            if (user_email == null || user_pass == null || re_pass == null || user_email.trim().isEmpty() || user_pass.trim().isEmpty() || re_pass.trim().isEmpty()) {
+                request.setAttribute("null_error", "Không được bỏ trống!");
+                request.getRequestDispatcher("user?action=login").forward(request, response);
+            }
             if (!user_pass.equals(re_pass)) {
                 request.setAttribute("error_pass", "Mật khẩu không trùng khớp. Hãy nhập lại...");
                 request.getRequestDispatcher("user?action=login").forward(request, response);
